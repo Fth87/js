@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function rest parameter</title>
+  </head>
+  <body>
+    <script>
+      function namaJumlah(nama, ...jumlah) {
+        let total = 0;
+        for (const hasil of jumlah) {
+          total += hasil;
+        }
+        document.writeln(`<h1>jenenge ${nama} jumlah e ${total}</>`);
+      }
+      namaJumlah('budi', 1, 2, 4, 4, 53, 14, 21);
+
+      //spread syntax (jika sudah menggunakan array;)
+      const spread = [10, 10, 10, 10, 10];
+      namaJumlah('bawang', ...spread);
+
+      //arguments object (lama/basi/useless)
+      function oldSum() {
+        let total = 0;
+        for (const argumen of arguments) {
+          total += argumen;
+        }
+        document.writeln(`<h2> hasilnya adalah ${total}</h2>`);
+      }
+      oldSum(1, 2, 3, 4, 5);
+    </script>
+  </body>
+</html>

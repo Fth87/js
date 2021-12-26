@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function sebagai value</title>
+  </head>
+  <body>
+    <script>
+      function jenengMu(jeneng) {
+        document.writeln(`<p>hello ${jeneng}</>`);
+      }
+      const mu = jenengMu;
+
+      jenengMu('ucup');
+      mu('joni');
+
+      function beriJeneng(ulangi) {
+        ulangi('markicap');
+      }
+      beriJeneng(jenengMu); //jenengmu(markicap)
+      beriJeneng(mu)
+    </script>
+  </body>
+</html>
