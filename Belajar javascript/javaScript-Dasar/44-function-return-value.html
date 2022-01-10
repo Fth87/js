@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function return value</title>
+  </head>
+  <body>
+    <script>
+      function jenengMu(jenengAwal, jenengAkhir) {
+        const nyopo = `hello ${jenengAwal} ${jenengAkhir}`;
+        return nyopo;
+      }
+      const hasil = jenengMu('ucup', 'joni');
+      document.writeln(`<p>${hasil}</>`);
+
+      function getValue(value) {
+        if (value > 90) {
+          return 'a';
+        } else if (value > 80) {
+          return 'b';
+        } else if (value > 70) {
+          return 'c';
+        } else if (value > 60) {
+          return 'e';
+        } else {
+          return 'Tidak bernilai';
+        }
+      }
+      const finalValue = getValue(92);
+      document.writeln(`<h1>${finalValue}</>`);
+
+      //menghentikan menggunakan return;
+
+      function isContains(array, searchValue) {
+        for (const elements of array) {
+          if (elements === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      array = [1, 2, 5, 6, 7, 66, 67, 34, 645, 299];
+      search = 10;
+      const found = isContains(array, search);
+      document.writeln(`<h1> ${found} </h1>`);
+    </script>
+  </body>
+</html>

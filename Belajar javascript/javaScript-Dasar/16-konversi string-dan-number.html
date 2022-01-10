@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const bil = 1;
+      const bil2 = parseInt('1');
+      const sum = bil + bil2;
+      // console.log(sum);
+      /* 
+          parseInt()                    
+          parseFloat()
+          Number()
+          nomerrbre.tostring()
+      */
+
+      document.writeln('<h1>' + sum + '</h1>');
+
+      //   NAN (float dan int ditolelir kalo belakang salah)
+      document.writeln(`<p>${parseFloat('salah')}`);
+      document.writeln(`<p>${parseInt('12salah')}`);
+
+      document.writeln(`<p>${Number('12salah')}`); //tidak ditolelir
+
+      //OPERASI ARITMATIKA PADA NaN pasti NaN
+
+      let num1 = 100;
+      let num2 = Number('salah'); //NaN
+      sum = num1 + num2;
+      document.writeln(`<p> ${sum} </p>`); //NaN
+
+      //Mengecek apakah bilangan itu NaN atau bukan;
+      document.writeln(`<p> ${isNaN(num2)} </p>`);
+      document.writeln(`<p> ${isNaN(num1)} </p>`);
+      document.writeln(`<p> ${isNaN(NaN)} </p>`);
+    </script>
+  </body>
+</html>

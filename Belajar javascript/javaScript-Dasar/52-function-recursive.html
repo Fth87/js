@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recursive function</title>
+  </head>
+  <body>
+    <script>
+      function factorial(nilai) {
+        let hasil = 1;
+        for (i = 1; i <= nilai; i++) {
+          hasil *= i;
+        }
+        return hasil;
+      }
+
+      console.log(factorial(5));
+      console.log(factorial(10));
+      console.log(factorial(3));
+
+      //function recursive
+
+      function factorialRecursive(value){
+        if(value === 1){
+        return 1;}
+       else {
+        return value*factorialRecursive(value-1);
+      };
+    }
+
+      console.log(factorialRecursive(5))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch statement</title>
+  </head>
+  <body>
+    <script>
+      let biji = prompt('masukkan biji anda(a/b/c/d)');
+
+      switch (biji) {
+        case 'a':
+          document.writeln('<h1>anda lulus,pintar</h1>');
+          break;
+        case 'b':
+        case 'c':
+          document.writeln('<h1>anda lulus,tapi...</h1>');
+          break;
+        case 'd':
+          document.writeln('<h1>anda tdk lulus,wibu!!</h1>');
+          break;
+        default:
+          document.writeln('<h1>mending pindah!!</h1>');
+      }
+    </script>
+  </body>
+</html>

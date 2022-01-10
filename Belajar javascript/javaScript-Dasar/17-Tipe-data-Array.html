@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let arrayKosong = [];
+      let arrayIsi = ['bebek', 'jalan', 1, 2, true, 'p'];
+      document.writeln(`<p>${arrayIsi}</p>`);
+
+      //menambah data di array
+      let jeneng = [];
+      jeneng.push('kucink');
+      jeneng.push('budi', 'ucup', 'baygon');
+      jeneng.push('bebek');
+      console.table(jeneng);
+      console.info(jeneng[0]);
+      console.info(jeneng[1]);
+      console.info(jeneng[2]);
+
+      jeneng[0] = 'hewan'; //mengubah data di index tertentu.
+      console.table(jeneng);
+
+      delete jeneng[3]; //menghapus data di index tertentu.
+      console.table(jeneng);
+      
+      jeneng[3] = 'nambah lagi';//nambah data yang telah dihapus.
+      console.table(jeneng);
+      
+    </script>
+  </body>
+</html>

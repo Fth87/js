@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>destructuring</title>
+  </head>
+  <body>
+    <script>
+      //di array
+      {
+        const jeneng = ['udin', 'udan', 'udun', 'udon', 'adon'];
+        const [namaAwal, namaTengah, namaAkhir, ...namaLain] = jeneng;
+
+        console.info(namaAwal);
+        console.info(namaTengah);
+        console.info(namaAkhir);
+        console.info(namaLain);
+      }
+
+      //di object;
+      {
+        const orang = {
+          namaAwal: 'Fatih',
+          namaTengah: 'Al',
+          namaAkhir: 'Fawwaz',
+          alamat: {
+            kota: 'lamongan',
+            jalan: 'bsky',
+            provinsi: 'jatim',
+          },
+          hobi: 'coding',
+          ig: 'Fatih_Fawwaz87',
+        };
+
+        const {
+          namaAwal,
+          namaTengah,
+          namaAkhir,
+          alamat: { kota, jalan, provinsi },
+          ...lainnya
+        } = orang;
+
+        console.info(namaAwal);
+        console.info(namaTengah);
+        console.info(namaAkhir);
+        console.info(kota);
+        console.info(jalan);
+        console.info(provinsi);
+        console.info(lainnya);
+      }
+
+      //destructuring di function parameter 1
+      {
+        function namaOrang({ namaAwal, namaTengah, namaAkhir }) {
+          console.info(namaAwal);
+          console.info(namaTengah);
+          console.info(namaAkhir);
+        }
+
+        const nama = {
+          namaAwal: 'Fatih',
+          namaTengah: 'Al',
+          namaAkhir: 'Fawwaz',
+        };
+        namaOrang(nama);
+      }
+
+      //destructuring di function parameter 2
+      {
+        function sum([pertama, kedua]) {
+          return pertama + kedua;
+        }
+        console.info(sum([1, 3]));
+        console.info(sum([1, 1]));
+        console.info(sum([20, 28]));
+      }
+
+      //default value destructuring array;
+      {
+        const nama = ['budi', 'ucup'];
+        const [namaAwal, namaTengah, namaAkhir = 'udin'] = nama;
+        console.log(namaAwal);
+        console.log(namaTengah);
+        console.log(namaAkhir);
+      }
+
+      //menggunakan nama variable lain;
+      {
+        const orang = {
+          namaDepan: 'Fatih',
+          namaTengah: 'al',
+        };
+
+        const { namaDepan: firstName, namaTengah: middleName, namaAkhir: lastName = 'ganteng' } = orang;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+    </script>
+  </body>
+</html>

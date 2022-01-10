@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For in</title>
+  </head>
+  <body>
+    <script>
+      //for in di object
+      const human = {
+        namaAwal: 'puk',
+        namaTengah: 'ky',
+        namaAkhir: 'ing',
+      };
+
+      for (const property in human) {
+        document.writeln(`<p>${property} : ${human[property]}</p>`);
+      }
+
+      //for in di array
+      const people = ['adji', 'fler', 'ronin', 'bijix'];
+      for (const index in people) {
+        document.writeln(`<p>${index} : ${people[index]} </>`);
+      }
+    </script>
+  </body>
+</html>

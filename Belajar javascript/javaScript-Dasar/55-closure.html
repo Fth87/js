@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closure</title>
+  </head>
+  <body>
+    <script>
+
+        
+      function buatNambah(hasil) {
+        const ndue = 'sabra';
+        function hasilE(param) {
+          console.log(ndue);
+          return hasil + param;
+        }
+        return hasilE;
+      }
+
+      const add = buatNambah(3);
+    //   function add(param) {
+    //     console.info('sabra');
+    //     return 3 + param;
+    //   }
+
+      console.info(add(10));
+      console.info(add(5));
+
+
+    </script>
+  </body>
+</html>

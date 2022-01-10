@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>in</title>
+  </head>
+  <body>
+    <script>
+       let orang = {
+               namaLngkaps: 'ttd',
+               namaSamarans: 'ttd1',
+             };
+             if ('namaLngkaps' in orang) {
+               alert(`hello ${orang.namaLngkaps}`);
+           } else {
+               alert('ndak ada');
+           };
+
+           //Jika undefined/ null maka akan tetap terbaca ada;
+           
+
+       let siswa = {
+           siswa1 : "joni",
+           siswa2 : "ucup",
+           siswa3 : undefined
+       }
+       if ("siswa3" in siswa){
+           alert(`Hello ${siswa.siswa3}`)
+       }
+       else {
+           alert("Ndax ada")
+       };
+
+       //contoh jika di array
+
+       let contoh = ["joni",null,undefined];
+       let cek = 2 in contoh;
+       alert(`Hasilnya = ${cek}`);
+
+    </script>
+  </body>
+</html>

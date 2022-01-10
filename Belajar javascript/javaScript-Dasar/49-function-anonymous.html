@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function anonymouse</title>
+  </head>
+  <body>
+    <script>
+      //menggunakan variable
+      let jeneng = function (nama) {
+        document.writeln(`<h1>namamu adalah ${nama}</>`);
+      };
+      jeneng('mully');
+
+      //menggunakan parameter
+
+      function celuk(nama) {
+        nama('nully');
+      }
+
+      celuk(function (jenenk) {
+        document.writeln(`jenengmu ${jenenk}`);
+      });
+    </script>
+  </body>
+</html>

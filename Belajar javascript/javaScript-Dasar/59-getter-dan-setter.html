@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // getter = function untuk mengambil data pada property di object;
+      // setter = function untuk mengubah data pada property di object;
+
+      //getter
+
+      const orang = {
+        jenengAwal: prompt('masukkan nama awal anda'),
+        jenengTengah: prompt('masukkan nama tengah anda'),
+        jenengAkhir: prompt('masukkan nama akhir anda'),
+
+        get jenengLengkap() {
+          return `${this.jenengAwal} ${this.jenengTengah} ${this.jenengAkhir}`;
+        },
+        set jenengLengkap(nilai) {
+          const arai = nilai.split(' ');
+          this.jenengAwal = arai[0];
+          this.jenengLengkap = arai[1];
+          this.jenengAkhir = arai[2];
+        },
+      };
+
+      orang.jenengLengkap = ' udin bin perpul';
+      console.table(orang);
+
+      orang.jenengLengkap = ' joko bin kucink';
+      console.table(orang);
+
+      console.info(orang.jenengLengkap);
+      orang.jenengLengkap = ' test bro awokoawk';
+      console.table(orang);
+
+      orang.jenengLengkap = ' ucup budi gamink';
+      console.table(orang);
+    </script>
+  </body>
+</html>

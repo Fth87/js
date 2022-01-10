@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scope</title>
+  </head>
+  <body>
+    <script>
+      let penghitung = 0; //global scope
+      function hitMe() {
+        penghitung++; //local scope
+      }
+      function lain() {}
+      hitMe();
+      hitMe();
+      hitMe();
+
+      console.info(penghitung);
+
+      //nested function scope (yang didalam bisa akses ke luar).;
+
+      function firstCounter() {
+        let firstVariable = 'first';
+        function secondCounter() {
+          console.log(firstVariable);
+        }
+        secondCounter();
+      }
+      firstCounter();
+    </script>
+  </body>
+</html>

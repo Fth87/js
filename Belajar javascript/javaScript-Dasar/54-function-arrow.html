@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function</title>
+  </head>
+  <body>
+    <script>
+      const jenengE = (jeneng) => {
+        console.info('hello ' + jeneng);
+      };
+
+      jenengE('hu');
+
+      // Lebih sederhananya lagi(tanpa kurung kurawa tapi 1 baris);
+
+      //   const jenengSimple = (jenengS) => console.info('hello ' + jenengS);
+
+      const jenengSimple = (jenengS) => console.info('hello ' + jenengS); //jika hanya 1 parameter,tanpa kurung parameter juga bisa;
+
+      jenengSimple('janu');
+
+      //mengembalikan tanpa return;
+
+      //   const angka = (pertama,kedua) => {
+      //    return pertama + kedua;
+      //   };
+
+      const angka = (pertama, kedua) => pertama + kedua;
+
+      console.log(angka(200, 100));
+
+      //dijadikan parameter juga bisa(sprti anonymous function);
+
+      function gaweJeneng(nyeluk) {
+        nyeluk('eko');
+      }
+
+
+      //anonymous function;
+    //   gaweJeneng(function(name){
+    //       console.log('hello ' + name);
+    //   }) 
+
+      //arrow function
+      gaweJeneng(name => console.info('hello ' + name));
+
+      
+    </script>
+  </body>
+</html>

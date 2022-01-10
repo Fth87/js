@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kata kunci this</title>
+  </head>
+  <body>
+    <script>
+      console.info(this); //window
+
+      function contoh() {
+        console.info(this);
+      }
+
+      function contoh1() {
+        function innerContoh1() {
+          console.info(this);
+        }
+        innerContoh1();
+      }
+
+      contoh(); //window
+
+      contoh1(); //window
+
+      //this jika di object
+
+      const jeneng = {
+        nama: 'Fatih',
+        contoh1: function (nama) {
+          console.info(`hello ${nama} my name is ${this.nama}`);//"this" mengacu pada "jeneng";
+        },
+      };
+
+      jeneng.contoh1('bebek');
+    </script>
+  </body>
+</html>

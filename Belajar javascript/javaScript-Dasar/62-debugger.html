@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>debugger</title>
+  </head>
+  <body>
+    <script>
+        
+      function buatNama(namaAwal, namaTengah, namaAkhir) {
+        const namaLengkap = `${namaAwal} ${namaAkhir} ${namaAkhir}`;
+        return namaLengkap;
+      }
+
+      const nama = buatNama('budi', 'joni', 'ucup');
+      console.log(nama);
+
+
+
+      //contoh lainnya
+      function sum (...angka){
+          debugger;
+          let total = 0;
+          for (const hasil of angka) {
+              hasil = total;
+              return hasil;
+
+          }
+          console.info(sum(1,12,23,23,12,31));
+      }
+    </script>
+  </body>
+</html>
